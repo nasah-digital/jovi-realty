@@ -1,0 +1,33 @@
+.cta-section {
+    padding: 50px 0px;
+    background-image: url(../../../../assets/Images/cta-bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-section h2 {
+    font-size: 60px;
+}
+
+.cta-section p {
+    max-width: 650px;
+}
+
+/* =============================================
+   Responsive
+   ============================================= */
+@media (max-width: 991px) {
+    .cta-section h2 {
+        font-size: 45px;
+    }
+
+    .cta-section p {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cta-section h2 {
+        font-size: 30px;
+    }
+}

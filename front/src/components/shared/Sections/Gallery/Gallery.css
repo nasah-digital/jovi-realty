@@ -1,0 +1,33 @@
+.lighbox-icon {
+    background-color: #fff0;
+    border: none;
+    color: #fff;
+}
+
+.see-all-photo-overlay {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.more-photos-count {
+    width: 80px;
+    aspect-ratio: 1;
+    background-color: #fff;
+    color: #1e1e1e;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+/* =============================================
+   Responsive
+   ============================================= */
+@media (max-width: 991px) {
+    .see-all-photo-overlay {
+        font-size: 18px;
+    }
+
+    .more-photos-count {
+        width: 55px;
+        font-size: 20px;
+    }
+}

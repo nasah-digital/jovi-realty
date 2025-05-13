@@ -34,7 +34,7 @@ const AgentDashboardSection = ({ enquiryData }) => {
                 <div className="user-list d-flex flex-column">
                     {enquiryData.map((item, index) => (
                         <div key={index} className="user-block">
-                            <div className="d-flex justify-content-between align-md-items-center flex-md-row flex-column gap-30">
+                            <div className="d-flex justify-content-between align-items-md-center flex-md-row flex-column gap-30">
                                 <div>
                                     <p>Order ID: {item.orderId}</p>
                                     <p className="inquiry-post-date mb-0">Date: {item.date}</p>

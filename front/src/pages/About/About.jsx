@@ -15,6 +15,7 @@ import technologyIcon from "./../../assets/Images/technology-icon.png";
 import marketingIcon from "./../../assets/Images/marketing-icon.png";
 import businessIcon from "./../../assets/Images/business-icon.png";
 
+
 const About = () => {
   const expertiseItems = [
     {

@@ -93,7 +93,7 @@ const Home = () => {
         description="Our team of experienced agents is here to help you navigate the market with ease."
         image={meetAgentsImg}
         buttonText="Find Your Agent"
-        buttonLink="#"
+        buttonLink="/find-an-agent"
       />
       <About />
       <FeatureCards title="Highlights" cards={homeHighlights} />

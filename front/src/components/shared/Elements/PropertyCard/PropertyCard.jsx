@@ -48,7 +48,7 @@ const PropertyCard = ({ property }) => {
           </div>
         </div>
         <p className="offered">Offered By: {property.agent}</p>
-        <Link href="/property-listing/property-inner" className="btn btn-primary position-absolute">
+        <Link to="/property-listing/property-inner" className="btn btn-primary position-absolute">
           View Details <i className="bi bi-arrow-right-short"></i>
         </Link>
       </div>

@@ -82,13 +82,13 @@ const GallerySection = ({ media }) => {
               className="lighbox-icon position-absolute top-0 end-0 m-2"
               onClick={closeLightbox}
             >
-              <i className="bi bi-x fs-3"></i>
+              <i className="bi bi-x fs-5"></i>
             </button>
             <button
               className="lighbox-icon lighbox-arrow position-absolute top-50 start-0 translate-middle-y ms-2"
               onClick={prevMedia}
             >
-              <i className="bi bi-chevron-left fs-3"></i>
+              <i className="bi bi-chevron-left fs-5"></i>
             </button>
             <div className="media-wrapper text-center">
               <img
@@ -101,7 +101,7 @@ const GallerySection = ({ media }) => {
               className="lighbox-icon lighbox-arrow position-absolute top-50 end-0 translate-middle-y me-2"
               onClick={nextMedia}
             >
-              <i className="bi bi-chevron-right fs-3"></i>
+              <i className="bi bi-chevron-right fs-5"></i>
             </button>
           </div>
         </div>

@@ -17,6 +17,12 @@
     border-radius: 50%;
     font-size: 24px;
 }
+.lighbox-icon {
+    background-color: #fff0;
+    border: 0px;
+    box-shadow: none;
+    color: #fff;
+}
 
 /* =============================================
    Responsive

@@ -1,9 +1,3 @@
-.lighbox-icon {
-    background-color: #fff0;
-    border: none;
-    color: #fff;
-}
-
 .see-all-photo-overlay {
     font-size: 20px;
     font-weight: 600;
@@ -17,11 +11,18 @@
     border-radius: 50%;
     font-size: 24px;
 }
-.lighbox-icon {
+.lightbox-icon {
     background-color: #fff0;
     border: 0px;
     box-shadow: none;
     color: #fff;
+}
+.more-photos-count {
+    background-color: #fff;
+    width: 90px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    color: var(--primary-color);
 }
 
 /* =============================================

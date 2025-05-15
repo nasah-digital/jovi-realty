@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import './Gallery.css'
 
 const GallerySection = ({ media }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -79,13 +80,13 @@ const GallerySection = ({ media }) => {
         >
           <div style={{ maxWidth: '90%', maxHeight: '90%' }}>
             <button
-              className="lighbox-icon position-absolute top-0 end-0 m-2"
+              className="lightbox-icon position-absolute top-0 end-0 m-2"
               onClick={closeLightbox}
             >
               <i className="bi bi-x fs-5"></i>
             </button>
             <button
-              className="lighbox-icon lighbox-arrow position-absolute top-50 start-0 translate-middle-y ms-2"
+              className="lightbox-icon lightbox-arrow position-absolute top-50 start-0 translate-middle-y ms-2"
               onClick={prevMedia}
             >
               <i className="bi bi-chevron-left fs-5"></i>
@@ -98,7 +99,7 @@ const GallerySection = ({ media }) => {
               />
             </div>
             <button
-              className="lighbox-icon lighbox-arrow position-absolute top-50 end-0 translate-middle-y me-2"
+              className="lightbox-icon lightbox-arrow position-absolute top-50 end-0 translate-middle-y me-2"
               onClick={nextMedia}
             >
               <i className="bi bi-chevron-right fs-5"></i>

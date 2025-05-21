@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./PropertyDetails.css"
 
 import bedIcon from "./../../../../assets/Images/bed-icon.svg";
@@ -11,6 +11,8 @@ import callIcon from "./../../../../assets/Images/call-icon-sl.svg";
 import { RxCross2 } from "react-icons/rx";
 
 const PropertyDetails = () => {
+    const [showSharePopup, setShowSharePopup] = useState(false);
+    const popupRef = useRef(null);
     // Define the dynamic details data
     const details = [
         { value: "3", icon: bedIcon, alt: "bed-icon" },
@@ -18,8 +20,6 @@ const PropertyDetails = () => {
         { value: "1420m<sup>2</sup>", icon: frameIcon, alt: "frame-icon" },
         { value: "2", icon: carIcon, alt: "car-icon" },
     ];
-
-    const [showSharePopup, setShowSharePopup] = useState(false);
 
   const handleShareClick = (e) => {
     e.preventDefault();
@@ -34,6 +34,31 @@ const PropertyDetails = () => {
     navigator.clipboard.writeText(window.location.href);
     alert("Link copied to clipboard!");
   };
+
+  // Escape key + click outside handler in useEffect
+  useEffect(() => {
+    const handleInteraction = (e) => {
+      if (!showSharePopup) return;
+
+      // Close on ESC key
+      if (e.key === "Escape") {
+        handleClosePopup();
+      }
+
+      // Close on outside click
+      if (e.type === "mousedown" && popupRef.current && !popupRef.current.contains(e.target)) {
+        handleClosePopup();
+      }
+    };
+
+    window.addEventListener("keydown", handleInteraction);
+    window.addEventListener("mousedown", handleInteraction);
+
+    return () => {
+      window.removeEventListener("keydown", handleInteraction);
+      window.removeEventListener("mousedown", handleInteraction);
+    };
+  }, [showSharePopup]);
 
     return (
         <div className="property-details">
@@ -77,22 +102,23 @@ const PropertyDetails = () => {
       </div>
 
       {/* Share Popup */}
-      {showSharePopup && (
-        <div className="property-share-popup">
-          <div className="popup-content">
-            <span className="close-btn" onClick={handleClosePopup}><RxCross2 className="w-75 fw-bold"/></span>
+     {showSharePopup && (
+        <div className="property-share-popup w-100 h-100 bg-black bg-opacity-75 position-fixed top-0 start-0 d-flex justify-content-center align-items-center" style={{ zIndex: 999 }}>
+          <div className="popup-content bg-white p-4 rounded" ref={popupRef}>
+            <span className="close-btn" onClick={handleClosePopup}>
+              <RxCross2 className="fs-4 fw-bold" />
+            </span>
             <h4>Share this listing</h4>
-            <div className="share-options">
+            <div className="share-options d-flex flex-column gap-2 mt-3">
               <a href={`https://wa.me/?text=${window.location.href}`} target="_blank" rel="noopener noreferrer">
                 <i className="bi bi-whatsapp"></i> WhatsApp
               </a>
               <a href={`mailto:?subject=Check this property&body=${window.location.href}`} target="_blank" rel="noopener noreferrer">
                 <i className="bi bi-envelope"></i> Email
               </a>
-             <a href={`sms:?body=Check out this property: ${window.location.href}`} target="_blank" rel="noopener noreferrer">
-             <i className="bi bi-chat-dots"></i> SMS
+              <a href={`sms:?body=Check out this property: ${window.location.href}`} target="_blank" rel="noopener noreferrer">
+                <i className="bi bi-chat-dots"></i> SMS
               </a>
-
               <button onClick={handleCopyLink}>
                 <i className="bi bi-clipboard"></i> Copy Link
               </button>

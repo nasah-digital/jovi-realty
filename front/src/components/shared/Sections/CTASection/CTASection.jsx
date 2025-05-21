@@ -43,7 +43,7 @@ const CTASection = ({ className = '' }) => {
                         </span>
                         <h2 className="main-h4">Subscribe to Jovi-Reality!!</h2>
                         <input type="email" placeholder="Your Email" />
-                        <button className="subscribe-btn btn-tertiary">SUBSCRIBE</button>
+                        <button className="btn btn-primary w-100">Subscribe</button>
                     </div>
                 </div>
             )}

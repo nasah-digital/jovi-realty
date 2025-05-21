@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import './assets/CSS/style.css';
 import './assets/CSS/responsive.css';
 import Home from './pages/Home/Home';
@@ -19,10 +19,12 @@ import SellYourProperty from './pages/SellYourProperty/SellYourProperty';
 import PropertyManagement from './pages/PropertyManagement/PropertyManagement';
 import NewsInnerPage from './pages/NewsAndResources/NewsInnerPage';
 import AgentDashBoard from './pages/Agent Dashboard/AgentDashBoard';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -46,6 +48,7 @@ const App = () => {
         </Routes>
       </div>
     </Router>
+
   );
 };
 

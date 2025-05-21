@@ -25,7 +25,6 @@ const Footer = () => {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Find an Agent', path: '/find-an-agent' },
-    { name: 'Properties', path: '/properties' },
     { name: 'Resources', path: '/news-and-resources' },
     { name: 'Property Management', path: '/property-management' },
   ];

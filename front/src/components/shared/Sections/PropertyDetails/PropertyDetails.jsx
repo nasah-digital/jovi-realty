@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PropertyDetails.css"
 
 import bedIcon from "./../../../../assets/Images/bed-icon.svg";
@@ -8,6 +8,7 @@ import carIcon from "./../../../../assets/Images/car-icon.svg";
 import agentImage from "./../../../../assets/Images/agent-image.png";
 import mailIcon from "./../../../../assets/Images/mail-icon-sl.svg";
 import callIcon from "./../../../../assets/Images/call-icon-sl.svg";
+import { RxCross2 } from "react-icons/rx";
 
 const PropertyDetails = () => {
     // Define the dynamic details data
@@ -18,50 +19,88 @@ const PropertyDetails = () => {
         { value: "2", icon: carIcon, alt: "car-icon" },
     ];
 
+    const [showSharePopup, setShowSharePopup] = useState(false);
+
+  const handleShareClick = (e) => {
+    e.preventDefault();
+    setShowSharePopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowSharePopup(false);
+  };
+
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(window.location.href);
+    alert("Link copied to clipboard!");
+  };
+
     return (
         <div className="property-details">
             <div className="container px-0">
                 <div className="row m-0">
-                    <div className="col-12">
-                        <div className="details-box d-flex flex-column row-gap-40">
-                            <div className="detail-box-header d-flex flex-md-row flex-column align-items-md-center justify-content-between gap-30">
-                                <div>
-                                    <h2 className="property-address-line-1 secondary-h2 mb-1">1503 Atlas Lane</h2>
-                                    <p className="property-address-line-2 mb-0">Vancouver West, Granville</p>
-                                </div>
-                                <div>
-                                    <h2 className="property-price main-h2">$1,928,888</h2>
-                                </div>
-                            </div>
-                            <hr />
-                            <div className="property-info-strip d-flex justify-content-between align-items-sm-center align-items-start flex-md-row flex-column gap-50">
-                                <div className="property-type-row d-flex align-items-lg-center justify-content-between flex-lg-row flex-column gap-30 w-100">
-                                    <div>
-                                        <h5 className="mb-0" style={{ fontSize: "22px", fontWeight: "400" }}>
-                                            Apartment
-                                        </h5>
-                                        <p className="mb-0" style={{ fontSize: "13px" }}>
-                                            Property Type
-                                        </p>
-                                    </div>
-                                    <div className="details-info d-sm-flex d-grid justify-content-between align-items-sm-center flex-wrap w-100 gap-30 flex-sm-row flex-column">
-                                        {details.map((detail, index) => (
-                                            <div key={index} className="detail-info d-flex align-items-center gap-10">
-                                                <p className="mb-0 detail-num" dangerouslySetInnerHTML={{ __html: detail.value }} />
-                                                <img src={detail.icon} alt={detail.alt} />
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                                <a href="#" className="share-btn column-gap-10 align-items-center">
-                                    Share
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                                        <path d="M20.5 4L3.5 9.5L10 12.5L17 7.5L12 14.5L15 21L20.5 4Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                     <div className="col-12">
+      <div className="details-box d-flex flex-column row-gap-40">
+        <div className="detail-box-header d-flex flex-md-row flex-column align-items-md-center justify-content-between gap-30">
+          <div>
+            <h2 className="property-address-line-1 secondary-h2 mb-1">1503 Atlas Lane</h2>
+            <p className="property-address-line-2 mb-0">Vancouver West, Granville</p>
+          </div>
+          <div>
+            <h2 className="property-price main-h2">$1,928,888</h2>
+          </div>
+        </div>
+        <hr />
+        <div className="property-info-strip d-flex justify-content-between align-items-sm-center align-items-start flex-md-row flex-column gap-50">
+          <div className="property-type-row d-flex align-items-lg-center justify-content-between flex-lg-row flex-column gap-30 w-100">
+            <div>
+              <h5 className="mb-0" style={{ fontSize: "22px", fontWeight: "400" }}>Apartment</h5>
+              <p className="mb-0" style={{ fontSize: "13px" }}>Property Type</p>
+            </div>
+            <div className="details-info d-sm-flex d-grid justify-content-between align-items-sm-center flex-wrap w-100 gap-30 flex-sm-row flex-column">
+              {details.map((detail, index) => (
+                <div key={index} className="detail-info d-flex align-items-center gap-10">
+                  <p className="mb-0 detail-num" dangerouslySetInnerHTML={{ __html: detail.value }} />
+                  <img src={detail.icon} alt={detail.alt} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <a href="#" className="share-btn column-gap-10 align-items-center d-flex" onClick={handleShareClick}>
+            Share
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+              <path d="M20.5 4L3.5 9.5L10 12.5L17 7.5L12 14.5L15 21L20.5 4Z" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      {/* Share Popup */}
+      {showSharePopup && (
+        <div className="property-share-popup">
+          <div className="popup-content">
+            <span className="close-btn" onClick={handleClosePopup}><RxCross2 className="w-75 fw-bold"/></span>
+            <h4>Share this listing</h4>
+            <div className="share-options">
+              <a href={`https://wa.me/?text=${window.location.href}`} target="_blank" rel="noopener noreferrer">
+                <i className="bi bi-whatsapp"></i> WhatsApp
+              </a>
+              <a href={`mailto:?subject=Check this property&body=${window.location.href}`} target="_blank" rel="noopener noreferrer">
+                <i className="bi bi-envelope"></i> Email
+              </a>
+             <a href={`sms:?body=Check out this property: ${window.location.href}`} target="_blank" rel="noopener noreferrer">
+             <i className="bi bi-chat-dots"></i> SMS
+              </a>
+
+              <button onClick={handleCopyLink}>
+                <i className="bi bi-clipboard"></i> Copy Link
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
                 </div>
                 <div className="row g-5 m-0 row-gap-50">
                     <div className="col-lg-7 mt-0 d-flex flex-column row-gap-40">

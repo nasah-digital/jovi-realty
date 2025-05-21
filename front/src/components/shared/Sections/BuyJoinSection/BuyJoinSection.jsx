@@ -11,7 +11,7 @@ const BuyJoinSection = ({ className = '' }) => {
                         <div className="buy-con position-relative d-flex justify-content-center align-items-center text-center flex-column row-gap-40">
                             <h2 className="main-h2 mb-0">Find Your Dream Home - Start Today!</h2>
                             <p className="mb-0">Explore top listings, get expert guidance, and make your dream home a reality with us!</p>
-                            <Link to="/properties">
+                            <Link to="/property-listing/buy">
                                 <button className="btn btn-tertiary">
                                     Buy Property <i className="bi bi-arrow-right-short"></i>
                                 </button>

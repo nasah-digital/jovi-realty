@@ -114,8 +114,8 @@ const PropertyManagement = () => {
         bannerText="Experience hassle-free property management with Jovi Realty—expert care, reliable service, and maximum returns for your real estate investment"
         buttonText1="Get In Touch"
         buttonLink1="/contact"
-        buttonText2="Our services"
-        buttonLink2="#"
+        // buttonText2="Our services"
+        // buttonLink2="#"
     />
     <IconBoxSectionThree title="Highlights" items={benefitsItems}/>
     <BoxedContentImage

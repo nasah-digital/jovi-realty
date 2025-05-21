@@ -134,6 +134,80 @@
     padding: 12px 30px;
 }
 
+/* Share Popup Styling */
+.property-share-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.property-share-popup .popup-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.property-share-popup .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.share-options {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.share-options a,
+.share-options button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  background-color: #f3f3f3;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.share-options button:hover,
+.share-options a:hover {
+  background-color: #e0e0e0;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
 /* =============================================
    Responsive
    ============================================= */
@@ -161,6 +235,55 @@
     .agent-social a {
         font-size: 14px;
     }
+
+
+
+
+    .detail-box-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .property-info-strip {
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+
+  .property-type-row {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+
+  .details-info {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .popup-content {
+    padding: 1.2rem;
+  }
+
+  .popup-content h4 {
+    font-size: 18px;
+  }
+
+  .share-options {
+    gap: 10px;
+  }
+
+  .share-options a,
+  .share-options button {
+    font-size: 14px;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .close-btn {
+    top: 10px;
+    right: 12px;
+    font-size: 20px;
+  }
 }
 
 @media (max-width:575px) {

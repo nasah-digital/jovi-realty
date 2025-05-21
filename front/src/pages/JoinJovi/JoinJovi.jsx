@@ -126,7 +126,7 @@ const JoinJovi = () => {
                 buttonText1="Get In Touch"
                 buttonLink1="/contact"
                 buttonText2="Our services"
-                buttonLink2="#"
+                buttonLink2="/property-management"
             />
             <IconBoxSectionTwo title="Why Join Jovi Realty?" items={benefitsItems} />
             <BoxedContentImage

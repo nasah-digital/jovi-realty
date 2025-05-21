@@ -16,7 +16,7 @@ const Footer = () => {
     { name: 'Instagram', url: 'https://www.instagram.com/jovirealty', icon: instaIcon },
     { name: 'TikTok', url: 'https://www.tiktok.com/@jovirealty', icon: ticktockIcon },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/company/jovirealty', icon: linkedinIcon },
-    { name: 'YouTube', url: 'https://www.youtube.com/@jovirealty', icon: ytIcon },
+    { name: 'YouTube', url: 'https://www.youtube.com/@jovirealty4376', icon: ytIcon },
     { name: 'Threads', url: 'https://www.threads.net/@jovirealty', icon: threadsIcon },
   ];
 

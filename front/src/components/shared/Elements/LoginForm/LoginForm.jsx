@@ -60,9 +60,15 @@ const LoginForm = () => {
           </div>
 
           <div className="social-icons">
-            <button type="button"><img src={googleIcon} alt="Google" /></button>
-            <button type="button"><img src={facebookIcon} alt="Facebook" /></button>
-            <button type="button"><img src={linkedinIcon} alt="LinkedIn" /></button>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src={googleIcon} alt="Google" />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src={facebookIcon} alt="Facebook" />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src={linkedinIcon} alt="LinkedIn" />
+            </a>
           </div>
 
           <div className="social-separator">

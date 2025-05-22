@@ -20,6 +20,7 @@ import PropertyManagement from './pages/PropertyManagement/PropertyManagement';
 import NewsInnerPage from './pages/NewsAndResources/NewsInnerPage';
 import AgentDashBoard from './pages/Agent Dashboard/AgentDashBoard';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
       <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Routes>
+        <Route path="/login" element={<LoginPage/>} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/property-listing/buy" element={<Buy />} />

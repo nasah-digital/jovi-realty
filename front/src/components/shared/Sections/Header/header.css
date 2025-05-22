@@ -120,18 +120,6 @@
     overflow-y: auto;
     z-index: 1000;
   }
-/* .fake-fixed {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1050;
-    /* height: 100vh; */
-    /* background: white; 
-    overflow: hidden;
-    transform: translateY(0); 
-    transition: transform 0.3s ease;
-  }  */
 
   .navbar-collapse.show {
     right: 0;

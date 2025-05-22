@@ -12,6 +12,8 @@ const InquiryFormTwo = () => {
     inquiry: '',
     location: '',
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,10 +21,32 @@ const InquiryFormTwo = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission
+
+    const form = e.target;
+
+    if (!form.checkValidity()) {
+      // Handle empty required fields
+      setErrorMessage('Please fill out all required fields.');
+      form.reportValidity();
+      return;
+    }
+
+    // If form is valid, proceed with submission
+    setErrorMessage(''); // Clear any existing error message
+    setIsSubmitted(true); // Set state to show success message
     console.log('Form submitted:', formData); // Replace with API call or other logic
-    // Optional: Navigate to a thank-you page
-    navigate('/thank-you');
+
+    // Reset form after submission
+    form.reset();
+    setFormData({ name: '', mobile: '', email: '', inquiry: '', location: '' });
+
+    // Hide success message after a few seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      // Optional: Navigate to a thank-you page
+      navigate('/thank-you');
+    }, 3000); // Message disappears after 3 seconds
   };
 
   return (
@@ -40,11 +64,11 @@ const InquiryFormTwo = () => {
             <div className="inquiry-sec-form-2 w-100">
               <h3 className="main-h3 mb-4">Ready to Maximize Your Property's Potential?</h3>
 
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} noValidate>
                 <div className="inquiry-form">
                   <div className="field-row">
                     <div className="field-group">
-                      <label className="form-label" htmlFor="name">Full Name</label>
+                      <label className="form-label" htmlFor="name">Full Name <span className="text-danger">*</span></label>
                       <input
                         type="text"
                         id="name"
@@ -57,7 +81,7 @@ const InquiryFormTwo = () => {
                       />
                     </div>
                     <div className="field-group">
-                      <label className="form-label" htmlFor="mobile">Mobile Number</label>
+                      <label className="form-label" htmlFor="mobile">Mobile Number <span className="text-danger">*</span></label>
                       <input
                         type="text"
                         id="mobile"
@@ -72,7 +96,7 @@ const InquiryFormTwo = () => {
                   </div>
                   <div className="field-row">
                     <div className="field-group">
-                      <label className="form-label" htmlFor="email">Email Address</label>
+                      <label className="form-label" htmlFor="email">Email Address <span className="text-danger">*</span></label>
                       <input
                         type="email"
                         id="email"
@@ -85,7 +109,7 @@ const InquiryFormTwo = () => {
                       />
                     </div>
                     <div className="field-group">
-                      <label className="form-label" htmlFor="inquiry">Inquiry For</label>
+                      <label className="form-label" htmlFor="inquiry">Inquiry For <span className="text-danger">*</span></label>
                       <select
                         id="inquiry"
                         name="inquiry"
@@ -102,7 +126,7 @@ const InquiryFormTwo = () => {
                     </div>
                   </div>
                   <div className="field-group">
-                    <label className="form-label" htmlFor="location">Location</label>
+                    <label className="form-label" htmlFor="location">Location <span className="text-danger">*</span></label>
                     <input
                       type="text"
                       id="location"
@@ -122,6 +146,25 @@ const InquiryFormTwo = () => {
                   </div>
                 </div>
               </form>
+
+              {/* Messages Container - Only shown if there is a message */}
+              {(isSubmitted || errorMessage) && (
+                <div className="mt-4">
+                  {/* Success Message */}
+                  {isSubmitted && (
+                    <div className="alert alert-success" role="alert">
+                      Form submitted successfully!
+                    </div>
+                  )}
+
+                  {/* Error Message */}
+                  {errorMessage && (
+                    <div className="alert alert-danger" role="alert">
+                      {errorMessage}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -59,25 +59,9 @@
 }
 
 .signup-steps-search-button {
-    background-color: #0050ff;
-    color: #fff;
-    max-width: 70%;
     padding: 10px 20px;
-    border-radius: 999px;
-    text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    white-space: nowrap;
-    transition: background-color 0.3s;
 }
-
-.signup-steps-search-button:hover {
-    background-color: #003fcc;
-}
-
 
 
 /* =============================================

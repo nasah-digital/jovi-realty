@@ -3,7 +3,7 @@
   padding: 20px 0 !important;
   background-color: #0d1835 !important;
 }
-
+/* 
 .topbar .btn-secondary {
   color: white;
   border: 2px solid #fff;
@@ -11,8 +11,8 @@
 
 .topbar .btn-secondary:hover {
   background-color: #fff;
-  color: #0244c0;
-}
+  color: var(--accent-color);
+} */
 
 .topbar-links-con {
   display: flex;

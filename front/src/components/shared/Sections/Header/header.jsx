@@ -48,23 +48,27 @@ const Header = () => {
 
 
                     <div className="top-bar-btn">
-                        <Link to="/property-listing/buy">
-                            <button className="btn btn-secondary">
-                                Buy
-                            </button>
-                        </Link>
-                        <Link to="/sell">
-                            <button className="btn btn-secondary">
-                                Sell
-                            </button>
-                        </Link>
-                        <Link to="/property-listing/rent">
-                            <button className="btn btn-secondary">
-                                Rent
-                            </button>
-                        </Link>
-
-
+                        <NavLink to="/property-listing/buy">
+                            {({ isActive }) => (
+                                <button className={`btn btn-fifth ${isActive ? 'active' : ''}`}>
+                                    Buy
+                                </button>
+                            )}
+                        </NavLink>
+                        <NavLink to="/sell">
+                            {({ isActive }) => (
+                                <button className={`btn btn-fifth ${isActive ? 'active' : ''}`}>
+                                    Sell
+                                </button>
+                            )}
+                        </NavLink>
+                        <NavLink to="/property-listing/rent">
+                            {({ isActive }) => (
+                                <button className={`btn btn-fifth ${isActive ? 'active' : ''}`}>
+                                    Rent
+                                </button>
+                            )}
+                        </NavLink>
                         <Link to="/login">
                             <button className="btn btn-primary">
                                 Login <i className="bi bi-arrow-right-short"></i>

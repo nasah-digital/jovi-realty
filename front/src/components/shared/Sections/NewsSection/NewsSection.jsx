@@ -71,7 +71,7 @@ const NewsSection = ({ title, postsPerPage = 12, totalPosts, className }) => {
                             </div>
                         ) : (
                             <p className="text-center text-muted">
-                                No resources found matching your criteria.
+                                No resources found matching your search.
                             </p>
                         )}
                         {totalPages > 1 && (

@@ -64,7 +64,7 @@ const PropertyDetails = () => {
         <div className="property-details">
             <div className="container px-0">
                 <div className="row m-0">
-                     <div className="col-12">
+                    <div className="col-12">
       <div className="details-box d-flex flex-column row-gap-40">
         <div className="detail-box-header d-flex flex-md-row flex-column align-items-md-center justify-content-between gap-30">
           <div>

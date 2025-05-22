@@ -233,6 +233,7 @@ const propertiesData = [
     bathrooms: 1,
     squareFeet: 1000,
     agent: "John Smith",
+    type: "Apartment",
   },
   {
     id: "PROP020",
@@ -245,6 +246,7 @@ const propertiesData = [
     bathrooms: 2,
     squareFeet: 1200,
     agent: "Michael Lee",
+    type: "Condo",
   },
   {
     id: "PROP021",
@@ -257,6 +259,7 @@ const propertiesData = [
     bathrooms: 1,
     squareFeet: 800,
     agent: "David Kim",
+    type: "Apartment",
   },
   {
     id: "PROP022",
@@ -269,6 +272,7 @@ const propertiesData = [
     bathrooms: 1,
     squareFeet: 950,
     agent: "Robert Taylor",
+    type: "Townhouse",
   },
   {
     id: "PROP023",
@@ -281,6 +285,7 @@ const propertiesData = [
     bathrooms: 2,
     squareFeet: 1800,
     agent: "James Wong",
+    type: "House",
   },
   {
     id: "PROP024",
@@ -293,6 +298,7 @@ const propertiesData = [
     bathrooms: 1,
     squareFeet: 1100,
     agent: "Mark Thompson",
+    type: "Apartment",
   },
   {
     id: "PROP025",
@@ -305,6 +311,7 @@ const propertiesData = [
     bathrooms: 2,
     squareFeet: 1300,
     agent: "Lucas Green",
+    type: "Condo",
   },
   {
     id: "PROP026",
@@ -317,6 +324,7 @@ const propertiesData = [
     bathrooms: 1,
     squareFeet: 900,
     agent: "Ethan Carter",
+    type: "Apartment",
   },
   {
     id: "PROP027",
@@ -329,6 +337,7 @@ const propertiesData = [
     bathrooms: 2,
     squareFeet: 1500,
     agent: "Noah Evans",
+    type: "Townhouse",
   },
   {
     id: "PROP028",
@@ -341,6 +350,7 @@ const propertiesData = [
     bathrooms: 1,
     squareFeet: 1000,
     agent: "Liam Harris",
+    type: "Apartment",
   },
   {
     id: "PROP029",
@@ -353,6 +363,7 @@ const propertiesData = [
     bathrooms: 1,
     squareFeet: 850,
     agent: "Jacob Moore",
+    type: "Apartment",
   },
   {
     id: "PROP030",
@@ -365,6 +376,7 @@ const propertiesData = [
     bathrooms: 2,
     squareFeet: 1400,
     agent: "Alexander Young",
+    type: "Condo",
   },
   {
     id: "PROP031",
@@ -377,6 +389,7 @@ const propertiesData = [
     bathrooms: 1,
     squareFeet: 1100,
     agent: "Jane Doe",
+    type: "Apartment",
   },
   {
     id: "PROP032",
@@ -389,6 +402,7 @@ const propertiesData = [
     bathrooms: 2,
     squareFeet: 1600,
     agent: "Emily Brown",
+    type: "Condo",
   },
   {
     id: "PROP033",
@@ -401,6 +415,7 @@ const propertiesData = [
     bathrooms: 1,
     squareFeet: 800,
     agent: "Lisa Chen",
+    type: "Apartment",
   },
   {
     id: "PROP034",
@@ -413,6 +428,7 @@ const propertiesData = [
     bathrooms: 1,
     squareFeet: 1200,
     agent: "Anna Martinez",
+    type: "Townhouse",
   },
   {
     id: "PROP035",
@@ -425,6 +441,7 @@ const propertiesData = [
     bathrooms: 2,
     squareFeet: 1700,
     agent: "Claire Adams",
+    type: "House",
   },
   {
     id: "PROP036",
@@ -437,7 +454,7 @@ const propertiesData = [
     bathrooms: 1,
     squareFeet: 1000,
     agent: "Sophie Nguyen",
+    type: "Apartment",
   },
-];
-
+]
 export default propertiesData;

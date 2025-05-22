@@ -1,8 +1,10 @@
-import React from 'react';
+import React  from 'react';
 import './InquiryForm.css';
 import inquirySecImg from './../../../../assets/Images/inquiry-sec.png';
+// import emailjs from 'emailjs-com';
 
 const InquiryForm = () => {
+
   return (
     <section className="inquiry-sec position-relative">
       <img src={inquirySecImg} className="position-absolute inquiry-sec-image d-md-block d-none" />
@@ -63,5 +65,6 @@ const InquiryForm = () => {
     </section>
   );
 };
+
 
 export default InquiryForm;

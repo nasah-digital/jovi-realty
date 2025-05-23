@@ -1,7 +1,7 @@
 import React from 'react';
 import './footer.css';
 import { Link, NavLink } from 'react-router-dom';
-import footerLogo from "./../../../../assets/Images/jovi-reality-logo-foo.png";
+import footerLogo from "./../../../../assets/Images/jovi reality logo 1.svg";
 import facebookIcon from "./../../../../assets/Images/facebook-icon.png";
 import instaIcon from "./../../../../assets/Images/instagram-icon.png";
 import ticktockIcon from "./../../../../assets/Images/ticktok-icon.png";

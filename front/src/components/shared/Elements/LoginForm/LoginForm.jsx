@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './LoginForm.css';
-import logo from "../../../../assets/Images/jovi-reality-logo-foo.png";
 import googleIcon from "../../../../assets/Images/googleIcon.svg";
 import facebookIcon from "../../../../assets/Images/fbIcon.svg";
 import linkedinIcon from "../../../../assets/Images/linkedinIcon.svg";
@@ -33,7 +32,6 @@ const LoginForm = () => {
     <div className='container d-flex justify-content-center'>
       <form className="LoginForm" onSubmit={handleSubmit}>
         <div className="jovi-form">
-          <img src={logo} alt="Jovi Logo" className="jovi-logo" />
 
           <h2 className="jovi-heading">Welcome Back!</h2>
           <p className="jovi-subtext">

@@ -1,7 +1,6 @@
 import React from "react";
-import "./PropertyCard.css"
+import "./PropertyCard.css";
 import { Link } from "react-router-dom";
-
 import mapPin from "./../../../../assets/Images/map.png";
 import bedroomIcon from "./../../../../assets/Images/bedroom-icon.png";
 import bathroomIcon from "./../../../../assets/Images/bathroom-icon.png";

@@ -3,7 +3,7 @@ import './header.css';
 import { Link, NavLink } from "react-router-dom";
 import mailIcon from "../../../../assets/Images/mail.png";
 import callIcon from "../../../../assets/Images/call.png";
-import logo from "../../../../assets/Images/jovi-reality-logo.png";
+import logo from "../../../../assets/Images/jovi reality logo 1.svg";
 
 const navItems = [
     { to: "/", label: "Home" },
@@ -82,7 +82,7 @@ const Header = () => {
             <nav className="navbar navbar-expand-xl bg-white">
                 <div className="container">
                     <Link className="navbar-brand fw-bold" to="/">
-                        <img src={logo} alt="Logo" className="me-2" />
+                        <img src={logo} alt="Logo" className="me-2 logo" />
                     </Link>
                     <button
                         className="navbar-toggler"

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './LoginForm.css';
-import logo from "../../../../assets/Images/jovi reality logo 1.svg";
+import logo from "../../../../assets/Images/jovi-reality-logo-foo.png";
 import googleIcon from "../../../../assets/Images/googleIcon.svg";
 import facebookIcon from "../../../../assets/Images/fbIcon.svg";
 import linkedinIcon from "../../../../assets/Images/linkedinIcon.svg";

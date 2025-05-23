@@ -69,11 +69,6 @@ const Header = () => {
                                 </button>
                             )}
                         </NavLink>
-                        <Link to="/login">
-                            <button className="btn btn-primary">
-                                Login <i className="bi bi-arrow-right-short"></i>
-                            </button>
-                        </Link>
                     </div>
                 </div>
             </div>
@@ -138,13 +133,19 @@ const Header = () => {
                                 </li>
                             ))}
                         </ul>
-                        <div className="ms-lg-3 mt-4 mt-lg-0">
+                        <div className="ms-lg-3 mt-4 mt-lg-0 d-flex gap-3 flex-wrap">
+                            <Link to="/login">
+                                <button className="btn btn-forth">
+                                    Login <i className="bi bi-arrow-right-short"></i>
+                                </button>
+                            </Link>
                             <Link to="/join-jovi" className="no-underline">
                                 <button className="btn btn-primary">
                                     Join Jovi <i className="bi bi-arrow-right-short"></i>
                                 </button>
                             </Link>
                         </div>
+
                     </div>
                 </div>
             </nav>

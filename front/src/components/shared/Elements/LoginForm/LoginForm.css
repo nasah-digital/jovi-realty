@@ -25,12 +25,12 @@
 .jovi-heading {
   font-size: 28px;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #0D1835;
 }
 
 .jovi-subtext {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   color: #0D1835;
   margin-bottom: 70px;
@@ -61,64 +61,6 @@
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 8px;
-}
-
-.forgot-password {
-  text-align: right;
-  margin-top: 5px;
-  text-underline-offset: 2px;
-}
-
-.forgot-password a {
-  font-size: 12px;
-  font-weight: 500;
-  color: #0D1835;
-  letter-spacing: 1.1;
-}
-.forgot-password a:hover{
-  color: #26418a;
-}
-
-.separator {
-  display: flex;
-  align-items: center;
-  margin: 50px 0;
-  gap: 5px;
-}
-
-.separator hr {
-  flex: 1;
-  border: none;
-  border-top: 1px solid #0244C0; 
-  height: 1px;
-  opacity: 0.3;
-}
-
-.separator span {
-  font-size: 16px;
-  font-weight: 500;
-  color: #0244C0; 
-  white-space: nowrap;
-}
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.social-icons button {
-  background:none;
-  border: none;
-  cursor: pointer;
-}
-
-.social-icons img {
-  width: 50px;
-  height: 50px;
-}
-.social-icons img:hover {
-  transform: scale(1.2);
-  filter: brightness(1.2);
 }
 
 .social-separator {

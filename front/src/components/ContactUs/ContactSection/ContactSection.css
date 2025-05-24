@@ -1,6 +1,6 @@
 /* Base/Layout */
 .contact-section {
-	padding: 100px 0px;
+	padding: 100px 20px;
 }
 
 .contact-section .container {
@@ -99,7 +99,7 @@
     ============================================= */
 @media (max-width: 991px) {
 	.contact-section {
-		padding: 90px 0px;
+		padding: 90px 20px;
 	}
 
 	.contact-section .container {

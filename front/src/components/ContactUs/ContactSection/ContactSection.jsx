@@ -90,7 +90,7 @@ const ContactSection = () => {
 				</div>
 				<div className="contact-details-cont d-flex flex-column">
 					{contactData.map((location, index) => (
-						<div className={`jovi-contact-row jovi-contact-block d-grid`} key={index}>
+						<div className={`jovi-contact-row jovi-contact-block d-grid gap-50`} key={index}>
 							<div className="jovi-contact-details" style={{
 								order: `${index % 2 === 0 ? 0 : 1}`
 							}}>

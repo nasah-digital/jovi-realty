@@ -112,6 +112,15 @@
 .ft-bottom-links a.active {
     font-weight: 600;
 }
+.ft-links .jovi-loc-link{
+    font-size: 17px;
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+.ft-links .jovi-loc-link:hover{
+    text-decoration: none;
+    color: #1365fe;
+}
 
 /* =============================================
     Responsive

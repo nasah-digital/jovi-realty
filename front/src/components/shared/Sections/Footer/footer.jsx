@@ -34,7 +34,7 @@ const Footer = () => {
     { name: 'Buy Property', path: '/property-listing/buy' },
     { name: 'Sell Property', path: '/sell' },
     { name: 'Rental Property', path: '/property-listing/rent' },
-    { name: 'Highlights', path: '/highlights' },
+    { name: 'Highlights', path: '/#highlights' },
   ];
 
   // Define footer bottom links
@@ -102,6 +102,10 @@ const Footer = () => {
                   <a href="tel:6042022929">604.202.2929</a>
                   <a href="mailto:hello@jovirealty.com">hello@jovirealty.com</a>
                   <a href="https://maps.app.goo.gl/aQbfJsbgFcHvgJAJA" target="_blank">201-2010 E 48th Ave Vancouver, BC V5P 1R8</a>
+
+                  <Link to="/contact" className='jovi-loc-link'>
+                    More locations<i className="bi bi-arrow-right-short"></i>
+                  </Link>
                 </div>
                 <div className="icons">
                   {socialLinks.map((link) => (

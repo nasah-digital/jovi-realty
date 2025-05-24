@@ -4,7 +4,7 @@ import "./IconBoxSection.css";
 
 const IconBoxSection = ({ title, items, showButton, buttonText, buttonLink, className = '' }) => {
   return (
-    <section className={`icon-box-sec ${className}`}>
+    <section id="highlights" className={`icon-box-sec ${className}`}>
       <div className="container">
         <div className="row">
           <div className="col-12">

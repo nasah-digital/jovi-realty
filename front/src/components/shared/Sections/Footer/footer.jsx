@@ -54,8 +54,8 @@ const Footer = () => {
             <div className="footer-row d-grid">
               {/* Logo & Description */}
               <div className="col-lg-10 ft-links sm-text-center pr-md-5">
-                <NavLink to="/" className={({ isActive }) => isActive ? "logo mb-4 active" : "logo mb-4"}>
-                  <img src={footerLogo} alt="Jovi Logo" />
+                <NavLink to="/" className="mb-4">
+                  <img src={footerLogo} alt="Jovi Logo" className="logo" />
                 </NavLink>
                 <p className="mt-2 mb-4">
                   Jovi Realty simplifies real estate for buyers, sellers, and renters. With decades of expertise, personalized service, and a transparent process, we help you find, sell, or manage properties with confidence. Your dream property starts here.

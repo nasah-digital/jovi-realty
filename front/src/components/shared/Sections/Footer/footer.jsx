@@ -34,7 +34,6 @@ const Footer = () => {
     { name: 'Buy Property', path: '/property-listing/buy' },
     { name: 'Sell Property', path: '/sell' },
     { name: 'Rental Property', path: '/property-listing/rent' },
-    { name: 'Highlights', path: '/#highlights' },
   ];
 
   // Define footer bottom links
